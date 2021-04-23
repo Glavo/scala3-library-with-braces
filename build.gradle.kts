@@ -62,18 +62,15 @@ val unzipSource by tasks.registering(Copy::class) {
 
 val compileScala by tasks.registering(JavaExec::class) {
     group = "build"
-    dependsOn(unzipSource)
 
     doFirst { classesDir.mkdirs() }
     classpath(dotc)
     main = "dotty.tools.dotc.Main"
     jvmArgs("-Dscala.usejavacp=true")
 
-    args(
-        scalaCompilerOptions +
-                listOf("-d", classesDir) +
-                fileTree(sourceDir) { include("**/*.scala") }.files
-    )
+    args(scalaCompilerOptions +
+            listOf("-d", classesDir) +
+            fileTree(sourceDir) { include("**/*.scala") }.files)
 }
 
 tasks.jar {
