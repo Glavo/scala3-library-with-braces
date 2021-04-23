@@ -62,6 +62,8 @@ val unzipSource by tasks.registering(Copy::class) {
 
 val compileScala by tasks.registering(JavaExec::class) {
     group = "build"
+    dependsOn(unzipSource)
+
     doFirst { classesDir.mkdirs() }
     classpath(dotc)
     main = "dotty.tools.dotc.Main"
