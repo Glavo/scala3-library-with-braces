@@ -1,2 +1,3 @@
-before_install:
+install:
   - ./gradlew unzipSource
+  - ./gradlew publishToMavenLocal
