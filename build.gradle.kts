@@ -8,11 +8,10 @@ plugins {
 }
 
 group = "org.glavo"
-version = "3.0.0-RC3"
+version = "3.0.0-RC3.1"
 
+val scalaVersion = "3.0.0-RC3"
 val useMirror = project.findProperty("useMirror") == "true"
-
-val scalaVersion = project.version
 val classesDir = file("$buildDir/classes/scala/main")
 val sourceDir = file("$buildDir/download/dotty-$scalaVersion/library/src")
 val downloadDir = file("$buildDir/download")
@@ -81,9 +80,9 @@ tasks.compileJava {
     dependsOn(compileScala)
 }
 
-val sourceJar by tasks.registering(Jar::class) {
+val sourcesJar by tasks.registering(Jar::class) {
     group = "build"
-    archiveClassifier.set("source")
+    archiveClassifier.set("sources")
     from("$sourceDir")
 }
 
@@ -95,7 +94,7 @@ configure<PublishingExtension> {
             artifactId = project.name
 
             from(components["java"])
-            artifact(sourceJar)
+            artifact(sourcesJar)
 
             pom {
                 licenses {
