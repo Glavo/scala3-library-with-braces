@@ -17,6 +17,7 @@ autoScalaLibrary := false
 ```
 
 Secondly, add the resolver for jitpack at the end of resolvers:
+
 (TODO: After the project publish to Maven central, this resolver will no longer be needed)
 
 ```sbt
