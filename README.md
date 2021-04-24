@@ -5,7 +5,7 @@
 Scala adds a terrible new feature, [optional braces](https://dotty.epfl.ch/docs/reference/other-new-features/indentation.html),
 which allow use indentation instead of braces. The new syntax is widely used in the standard library.
 
-In order to exclude this function, this project provides a Scala 3 standard library built with the old version syntax,
+In order to exclude this syntax, this project provides a Scala 3 standard library built with the old version syntax,
 and provides the corresponding sources jar. We suggest using this project instead of relying on official builds.
 
 (Note: this project is temporarily published on jitpack and will be transferred to Maven central in the future.)
