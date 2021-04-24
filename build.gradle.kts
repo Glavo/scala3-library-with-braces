@@ -8,7 +8,7 @@ plugins {
 }
 
 group = "org.glavo"
-version = "3.0.0-RC3-3"
+version = "3.0.0-RC3-4"
 
 val scalaVersion = "3.0.0-RC3"
 val useMirror = project.findProperty("useMirror") == "true"
@@ -30,6 +30,8 @@ dependencies {
     //dotc("org.scala-lang:scala3-library_$scalaVersion:$scalaVersion")
     dotc("org.scala-lang:scala3-compiler_$scalaVersion:$scalaVersion")
     //dotc("org.scala-lang:scala3-scaladoc_$scalaVersion:$scalaVersion")
+
+    api("org.scala-lang:scala-library:2.13.5")
 }
 
 
@@ -122,9 +124,73 @@ configure<PublishingExtension> {
 
                 developers {
                     developer {
-                        id.set("glavo")
-                        name.set("Glavo")
-                        email.set("zjx001202@gmail.com")
+                        id.set("odersky")
+                        name.set("Martin Odersky")
+                        url.set("https://github.com/odersky")
+                        email.set("martin.odersky@epfl.ch")
+                    }
+
+                    developer {
+                        id.set("DarkDimius")
+                        name.set("Dmitry Petrashko")
+                        url.set("https://d-d.me")
+                        email.set("me@d-d.me")
+                    }
+
+                    developer {
+                        id.set("smarter")
+                        name.set("Guillaume Martres")
+                        url.set("https://guillaume.martres.me")
+                        email.set("smarter@ubuntu.com")
+                    }
+
+                    developer {
+                        id.set("felixmulder")
+                        name.set("Felix Mulder")
+                        url.set("https://felixmulder.com")
+                        email.set("felix.mulder@gmail.com")
+                    }
+
+                    developer {
+                        id.set("liufengyun")
+                        name.set("Liu Fengyun")
+                        url.set("https://fengy.me")
+                        email.set("liu@fengy.me")
+                    }
+
+                    developer {
+                        id.set("nicolasstucki")
+                        name.set("Nicolas Stucki")
+                        url.set("https://github.com/nicolasstucki")
+                        email.set("nicolas.stucki@gmail.com")
+                    }
+
+                    developer {
+                        id.set("OlivierBlanvillain")
+                        name.set("Olivier Blanvillain")
+                        url.set("https://github.com/OlivierBlanvillain")
+                        email.set("olivier.blanvillain@gmail.com")
+                    }
+
+                    developer {
+                        id.set("biboudis")
+                        name.set("Aggelos Biboudis")
+                        url.set("https://biboudis.github.io")
+                        email.set("aggelos.biboudis@epfl.ch")
+                    }
+
+                    developer {
+                        id.set("allanrenucci")
+                        name.set("Allan Renucci")
+                        url.set("https://github.com/allanrenucci")
+                        email.set("allan.renucci@gmail.com")
+                    }
+
+                    developer {
+                        id.set("Duhemm")
+                        name.set("Martin Duhem")
+                        url.set("https://github.com/Duhemm")
+                        email.set("martin.duhem@gmail.com")
                     }
                 }
 
