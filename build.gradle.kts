@@ -67,13 +67,28 @@ val compileScala by tasks.registering(JavaExec::class) {
     main = "dotty.tools.dotc.Main"
     jvmArgs("-Dscala.usejavacp=true")
 
-    args(scalaCompilerOptions +
-            listOf("-d", classesDir) +
-            fileTree(sourceDir) { include("**/*.scala") }.files)
+    args(
+        scalaCompilerOptions +
+                listOf("-d", classesDir) +
+                fileTree(sourceDir) { include("**/*.scala") }.files
+    )
 }
 
 tasks.jar {
     from(classesDir)
+
+    manifest {
+        attributes(
+            "Implementation-Title" to "scala3-library-bootstrapped",
+            "Implementation-Version" to scalaVersion,
+            "Specification-Vendor" to "LAMP/EPFL",
+            "Specification-Title" to "scala3-library-bootstrapped",
+            "Implementation-Vendor-Id" to "org.scala-lang",
+            "Specification-Version" to scalaVersion,
+            "Implementation-URL" to "https://github.com/Glavo/scala3-library-with-braces",
+            "Implementation-Vendor" to "LAMP/EPFL"
+        )
+    }
 }
 
 tasks.compileJava {
