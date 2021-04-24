@@ -8,7 +8,7 @@ plugins {
 }
 
 group = "org.glavo"
-version = "3.0.0-RC3-2"
+version = "3.0.0-RC3-3"
 
 val scalaVersion = "3.0.0-RC3"
 val useMirror = project.findProperty("useMirror") == "true"
@@ -78,6 +78,7 @@ tasks.jar {
     from(classesDir)
 
     manifest {
+
         attributes(
             "Implementation-Title" to "scala3-library-bootstrapped",
             "Implementation-Version" to scalaVersion,
@@ -85,7 +86,7 @@ tasks.jar {
             "Specification-Title" to "scala3-library-bootstrapped",
             "Implementation-Vendor-Id" to "org.scala-lang",
             "Specification-Version" to scalaVersion,
-            "Implementation-URL" to "https://github.com/Glavo/scala3-library-with-braces",
+            "Implementation-URL" to "https://git.io/scala3-library-with-braces",
             "Implementation-Vendor" to "LAMP/EPFL"
         )
     }
