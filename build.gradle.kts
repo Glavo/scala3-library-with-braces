@@ -8,7 +8,7 @@ plugins {
 }
 
 group = "org.glavo"
-version = "3.0.0-RC3.1"
+version = "3.0.0-RC3-1"
 
 val scalaVersion = "3.0.0-RC3"
 val useMirror = project.findProperty("useMirror") == "true"
