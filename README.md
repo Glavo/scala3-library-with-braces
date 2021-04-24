@@ -28,7 +28,7 @@ Then add the dependency:
 ```sbt
 libraryDependencies ++= Seq(
     "org.scala-lang" % "scala-library" % "2.13.5",
-    "org.glavo" % "scala3-library-with-braces" % "3.0.0-RC3-1"
+    "org.glavo" % "scala3-library-with-braces" % "3.0.0-RC3-2"
 )
 ```
 
