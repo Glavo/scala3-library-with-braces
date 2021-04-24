@@ -26,10 +26,7 @@ resolvers += "jitpack" at "https://jitpack.io"
 Then add the dependency:
 
 ```sbt
-libraryDependencies ++= Seq(
-    "org.scala-lang" % "scala-library" % "2.13.5",
-    "org.glavo" % "scala3-library-with-braces" % "3.0.0-RC3-3"
-)
+libraryDependencies += "org.glavo" % "scala3-library-with-braces" % "3.0.0-RC3-4"
 ```
 
 (Optional) Finally, disable indentation syntax in your project:
