@@ -8,9 +8,9 @@ plugins {
 }
 
 group = "org.glavo"
-version = "3.0.0-RC3-4"
+version = "3.0.0"
 
-val scalaVersion = "3.0.0-RC3"
+val scalaVersion = "3.0.0"
 val useMirror = project.findProperty("useMirror") == "true"
 val classesDir = file("$buildDir/classes/scala/main")
 val sourceDir = file("$buildDir/download/dotty-$scalaVersion/library/src")
@@ -28,8 +28,9 @@ val dotc by configurations.creating {}
 
 dependencies {
     //dotc("org.scala-lang:scala3-library_$scalaVersion:$scalaVersion")
-    dotc("org.scala-lang:scala3-compiler_$scalaVersion:$scalaVersion")
+    dotc("org.scala-lang:scala3-compiler_3:$scalaVersion")
     //dotc("org.scala-lang:scala3-scaladoc_$scalaVersion:$scalaVersion")
+
 
     api("org.scala-lang:scala-library:2.13.5")
 }
