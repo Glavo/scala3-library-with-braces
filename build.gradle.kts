@@ -8,9 +8,9 @@ plugins {
 }
 
 group = "org.glavo"
-version = "3.0.0"
+version = "3.0.1"
 
-val scalaVersion = "3.0.0"
+val scalaVersion = "3.0.1"
 val useMirror = project.findProperty("useMirror") == "true"
 val classesDir = file("$buildDir/classes/scala/main")
 val sourceDir = file("$buildDir/download/dotty-$scalaVersion/library/src")
