@@ -32,7 +32,7 @@ dependencies {
     //dotc("org.scala-lang:scala3-scaladoc_$scalaVersion:$scalaVersion")
 
 
-    api("org.scala-lang:scala-library:2.13.5")
+    api("org.scala-lang:scala-library:2.13.6")
 }
 
 
